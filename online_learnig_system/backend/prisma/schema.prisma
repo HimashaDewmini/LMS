@@ -14,11 +14,11 @@ model User {
   id       Int     @id @default(autoincrement())
   name     String
   email    String  @unique
-  password String? // optional for Google login
-  role     String  // "student" | "instructor" | "admin"
-  contact  String? // ✅ NEW: student/instructor contact number
-  status   String? @default("Active") // Active / Inactive
-  rating   Float?  // <-- NEW: rating for instructors
+  password String? 
+  role     String  
+  contact  String?
+  status   String? @default("Active") 
+  rating   Float?  
   profileImage String? 
   // Relations
   courses     Course[]         @relation("CourseInstructor")
@@ -81,7 +81,7 @@ model CourseApproval {
 model Category {
   id        Int      @id @default(autoincrement())
   name      String   @unique
-   description String? 
+  description String? 
   createdAt DateTime @default(now())
   courses   Course[]
 }
