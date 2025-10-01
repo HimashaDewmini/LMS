@@ -5,9 +5,9 @@ const bcrypt = require('bcrypt');
 const prisma = new PrismaClient();
 
 async function main() {
-  const email = 'himashadewmini12345@gmail.com';  // 🔹 change this
+  const email = '';  // 🔹 change this
   const name = 'Super Admin';             // 🔹 change this
-  const password = 'Hurathal1#';          // 🔹 change this
+  const password = '';          // 🔹 change this
   const role = 'admin';
 
   // Check if admin already exists
